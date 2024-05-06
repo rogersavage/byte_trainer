@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   FaBackspace, 
   FaTrash, 
@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const App: React.FC = () => {
+
+  useEffect(() => {document.title = "Byte Trainer";},[]);
   const [inputValue, setInputValue] = useState('');
   const [randomValue, setRandomValue] = 
     useState(() => generateRandomValue("Hex"));
